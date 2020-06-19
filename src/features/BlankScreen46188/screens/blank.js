@@ -129,6 +129,15 @@ export class _Blank extends React.Component {
               value={this.state.Input_30}
               onChangeText={nextValue => this.setState({ Input_30: nextValue })}
             />
+            <Image
+              resizeMode="cover"
+              style={{
+                overflow: "visible",
+                textAlign: "left",
+                verticalAlign: "baseline",
+                borderStyle: "solid"
+              }}
+            />
           </View>
           <View
             style={{
