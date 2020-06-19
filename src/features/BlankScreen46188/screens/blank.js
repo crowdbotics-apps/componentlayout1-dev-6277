@@ -204,6 +204,17 @@ export class _Blank extends React.Component {
                 this.setState({ CheckBox_41: nextChecked })
               }
             />
+            <Icon
+              iconFont="Eva Design Icons"
+              icon="github"
+              style={{
+                overflow: "visible",
+                textAlign: "left",
+                verticalAlign: "baseline",
+                borderStyle: "solid",
+                fontSize: 20
+              }}
+            />
           </View>
         </View>
       </View>
