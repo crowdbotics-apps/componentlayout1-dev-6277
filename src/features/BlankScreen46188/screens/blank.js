@@ -18,7 +18,15 @@ export class _Blank extends React.Component {
     title: "Blank".toUpperCase()
   }
 
-  state = {}
+  state = {
+    Input_25: "",
+    Input_30: "",
+    CheckBox_41: true,
+    Input_23: "",
+    Datepicker_28: new Date("06/18/2020"),
+    Toggle_34: true,
+    Radio_59: true
+  }
 
   render = () => (
     <View
@@ -36,19 +44,224 @@ export class _Blank extends React.Component {
         backgroundSize: "auto"
       }}
     >
-      <Button
+      <View
         style={{
           overflow: "visible",
           textAlign: "left",
           verticalAlign: "baseline",
           fontSize: 20,
+          flexDirection: "column",
+          flexWrap: "wrap",
+          justifyContent: "flex-start",
+          alignItems: "stretch",
+          alignContent: "stretch",
           borderStyle: "solid",
-          backgroundColor: "#3366FF"
+          backgroundSize: "auto"
         }}
-        onPress={() => alert("Pressed!")}
       >
-        Button
-      </Button>
+        <View
+          style={{
+            overflow: "visible",
+            textAlign: "left",
+            verticalAlign: "baseline",
+            fontSize: 20,
+            flexDirection: "row",
+            flexWrap: "wrap",
+            justifyContent: "flex-start",
+            alignItems: "stretch",
+            alignContent: "stretch",
+            borderStyle: "solid",
+            backgroundSize: "auto"
+          }}
+        >
+          <View
+            style={{
+              overflow: "visible",
+              textAlign: "left",
+              verticalAlign: "baseline",
+              fontSize: 20,
+              flexDirection: "column",
+              flexWrap: "wrap",
+              justifyContent: "flex-start",
+              alignItems: "stretch",
+              alignContent: "stretch",
+              borderStyle: "solid",
+              backgroundSize: "auto"
+            }}
+          >
+            <Button
+              style={{
+                overflow: "visible",
+                textAlign: "left",
+                verticalAlign: "baseline",
+                fontSize: 20,
+                borderStyle: "solid",
+                backgroundColor: "#3366FF"
+              }}
+              onPress={() => alert("Pressed!")}
+            >
+              Button
+            </Button>
+            <Input
+              placeholder="Text input placeholder"
+              editable={true}
+              keyboardType="numeric"
+              style={{
+                overflow: "visible",
+                textAlign: "left",
+                verticalAlign: "baseline",
+                fontSize: 20,
+                borderStyle: "solid"
+              }}
+              value={this.state.Input_25}
+              onChangeText={nextValue => this.setState({ Input_25: nextValue })}
+            />
+            <Input
+              placeholder="Text input placeholder"
+              editable={true}
+              multiline={true}
+              textStyle={{ height: 100 }}
+              style={{
+                overflow: "visible",
+                textAlign: "left",
+                verticalAlign: "baseline",
+                fontSize: 20,
+                borderStyle: "solid"
+              }}
+              value={this.state.Input_30}
+              onChangeText={nextValue => this.setState({ Input_30: nextValue })}
+            />
+            <Image
+              resizeMode="cover"
+              style={{
+                overflow: "visible",
+                textAlign: "left",
+                verticalAlign: "baseline",
+                borderStyle: "solid"
+              }}
+            />
+            <CheckBox
+              text="Checkbox"
+              disabled={false}
+              style={{
+                overflow: "visible",
+                textAlign: "left",
+                verticalAlign: "baseline",
+                borderStyle: "solid"
+              }}
+              checked={this.state.CheckBox_41}
+              onChange={nextChecked =>
+                this.setState({ CheckBox_41: nextChecked })
+              }
+            />
+            <Icon
+              iconFont="Eva Design Icons"
+              icon="github"
+              style={{
+                overflow: "visible",
+                textAlign: "left",
+                verticalAlign: "baseline",
+                borderStyle: "solid",
+                fontSize: 20
+              }}
+            />
+          </View>
+          <View
+            style={{
+              overflow: "visible",
+              textAlign: "left",
+              verticalAlign: "baseline",
+              fontSize: 20,
+              flexDirection: "column",
+              flexWrap: "wrap",
+              justifyContent: "flex-start",
+              alignItems: "stretch",
+              alignContent: "stretch",
+              borderStyle: "solid",
+              backgroundSize: "auto"
+            }}
+          >
+            <Text
+              style={{
+                overflow: "visible",
+                textAlign: "left",
+                verticalAlign: "baseline",
+                fontSize: 20,
+                borderStyle: "solid"
+              }}
+            >
+              Text
+            </Text>
+            <Input
+              placeholder="Text input placeholder"
+              editable={true}
+              style={{
+                overflow: "visible",
+                textAlign: "left",
+                verticalAlign: "baseline",
+                fontSize: 20,
+                borderStyle: "solid"
+              }}
+              value={this.state.Input_23}
+              onChangeText={nextValue => this.setState({ Input_23: nextValue })}
+            />
+            <Datepicker
+              style={{
+                overflow: "visible",
+                textAlign: "left",
+                verticalAlign: "baseline",
+                fontSize: 20,
+                borderStyle: "solid"
+              }}
+              date={this.state.Datepicker_28}
+              onSelect={nextValue =>
+                this.setState({ Datepicker_28: nextValue })
+              }
+            />
+            <Toggle
+              activeColor="#409EFF"
+              inactiveColor="#C0CCDA"
+              disabled={false}
+              text="switch ON/OFF"
+              style={{
+                overflow: "visible",
+                textAlign: "left",
+                verticalAlign: "baseline",
+                borderStyle: "solid"
+              }}
+              checked={this.state.Toggle_34}
+              onChange={nextChecked =>
+                this.setState({ Toggle_34: nextChecked })
+              }
+            />
+            <Slider
+              value={50}
+              minimumValue={0}
+              maximumValue={100}
+              step={1}
+              disabled={false}
+              style={{
+                overflow: "visible",
+                textAlign: "left",
+                verticalAlign: "baseline",
+                borderStyle: "solid"
+              }}
+            />
+            <Radio
+              text="Radio button"
+              disabled={false}
+              style={{
+                overflow: "visible",
+                textAlign: "left",
+                verticalAlign: "baseline",
+                borderStyle: "solid"
+              }}
+              checked={this.state.Radio_59}
+              onChange={nextChecked => this.setState({ Radio_59: nextChecked })}
+            />
+          </View>
+        </View>
+      </View>
     </View>
   )
 }
