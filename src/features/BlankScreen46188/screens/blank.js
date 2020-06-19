@@ -23,8 +23,6 @@ export class _Blank extends React.Component {
     Input_30: "",
     CheckBox_41: true,
     Input_23: "",
-    Datepicker_28: new Date("06/18/2020"),
-    Toggle_34: true,
     Radio_59: true
   }
 
@@ -131,15 +129,6 @@ export class _Blank extends React.Component {
               value={this.state.Input_30}
               onChangeText={nextValue => this.setState({ Input_30: nextValue })}
             />
-            <Image
-              resizeMode="cover"
-              style={{
-                overflow: "visible",
-                textAlign: "left",
-                verticalAlign: "baseline",
-                borderStyle: "solid"
-              }}
-            />
             <CheckBox
               text="Checkbox"
               disabled={false}
@@ -153,17 +142,6 @@ export class _Blank extends React.Component {
               onChange={nextChecked =>
                 this.setState({ CheckBox_41: nextChecked })
               }
-            />
-            <Icon
-              iconFont="Eva Design Icons"
-              icon="github"
-              style={{
-                overflow: "visible",
-                textAlign: "left",
-                verticalAlign: "baseline",
-                borderStyle: "solid",
-                fontSize: 20
-              }}
             />
           </View>
           <View
@@ -204,48 +182,6 @@ export class _Blank extends React.Component {
               }}
               value={this.state.Input_23}
               onChangeText={nextValue => this.setState({ Input_23: nextValue })}
-            />
-            <Datepicker
-              style={{
-                overflow: "visible",
-                textAlign: "left",
-                verticalAlign: "baseline",
-                fontSize: 20,
-                borderStyle: "solid"
-              }}
-              date={this.state.Datepicker_28}
-              onSelect={nextValue =>
-                this.setState({ Datepicker_28: nextValue })
-              }
-            />
-            <Toggle
-              activeColor="#409EFF"
-              inactiveColor="#C0CCDA"
-              disabled={false}
-              text="switch ON/OFF"
-              style={{
-                overflow: "visible",
-                textAlign: "left",
-                verticalAlign: "baseline",
-                borderStyle: "solid"
-              }}
-              checked={this.state.Toggle_34}
-              onChange={nextChecked =>
-                this.setState({ Toggle_34: nextChecked })
-              }
-            />
-            <Slider
-              value={50}
-              minimumValue={0}
-              maximumValue={100}
-              step={1}
-              disabled={false}
-              style={{
-                overflow: "visible",
-                textAlign: "left",
-                verticalAlign: "baseline",
-                borderStyle: "solid"
-              }}
             />
             <Radio
               text="Radio button"
