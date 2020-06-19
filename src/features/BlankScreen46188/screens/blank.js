@@ -21,9 +21,9 @@ export class _Blank extends React.Component {
   state = {
     Input_25: "",
     Input_30: "",
-    CheckBox_41: true,
     Input_23: "",
-    Radio_59: true
+    Radio_59: true,
+    CheckBox_41: true
   }
 
   render = () => (
@@ -129,20 +129,6 @@ export class _Blank extends React.Component {
               value={this.state.Input_30}
               onChangeText={nextValue => this.setState({ Input_30: nextValue })}
             />
-            <CheckBox
-              text="Checkbox"
-              disabled={false}
-              style={{
-                overflow: "visible",
-                textAlign: "left",
-                verticalAlign: "baseline",
-                borderStyle: "solid"
-              }}
-              checked={this.state.CheckBox_41}
-              onChange={nextChecked =>
-                this.setState({ CheckBox_41: nextChecked })
-              }
-            />
           </View>
           <View
             style={{
@@ -194,6 +180,20 @@ export class _Blank extends React.Component {
               }}
               checked={this.state.Radio_59}
               onChange={nextChecked => this.setState({ Radio_59: nextChecked })}
+            />
+            <CheckBox
+              text="Checkbox"
+              disabled={false}
+              style={{
+                overflow: "visible",
+                textAlign: "left",
+                verticalAlign: "baseline",
+                borderStyle: "solid"
+              }}
+              checked={this.state.CheckBox_41}
+              onChange={nextChecked =>
+                this.setState({ CheckBox_41: nextChecked })
+              }
             />
           </View>
         </View>
