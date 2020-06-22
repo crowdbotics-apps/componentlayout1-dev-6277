@@ -21,6 +21,7 @@ export class _Blank extends React.Component {
   state = {
     Input_25: "",
     Input_30: "",
+    Toggle_3: true,
     Input_23: "",
     Radio_59: true,
     CheckBox_41: true,
@@ -129,6 +130,20 @@ export class _Blank extends React.Component {
               }}
               value={this.state.Input_30}
               onChangeText={nextValue => this.setState({ Input_30: nextValue })}
+            />
+            <Toggle
+              activeColor="#409EFF"
+              inactiveColor="#C0CCDA"
+              disabled={false}
+              text="switch ON/OFF"
+              style={{
+                overflow: "visible",
+                textAlign: "left",
+                verticalAlign: "baseline",
+                borderStyle: "solid"
+              }}
+              checked={this.state.Toggle_3}
+              onChange={nextChecked => this.setState({ Toggle_3: nextChecked })}
             />
           </View>
           <View
