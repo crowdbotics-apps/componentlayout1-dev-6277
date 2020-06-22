@@ -145,15 +145,13 @@ export class _Blank extends React.Component {
               checked={this.state.Toggle_3}
               onChange={nextChecked => this.setState({ Toggle_3: nextChecked })}
             />
-            <Image
-              resizeMode="cover"
-              source={{
-                uri:
-                  "https://d3nfddh2sbo9hk.cloudfront.net/media/project_component_resources/2.png"
-              }}
+            <Slider
+              value={50}
+              minimumValue={0}
+              maximumValue={100}
+              step={1}
+              disabled={false}
               style={{
-                width: "50%",
-                height: "50%",
                 overflow: "visible",
                 textAlign: "left",
                 verticalAlign: "baseline",
