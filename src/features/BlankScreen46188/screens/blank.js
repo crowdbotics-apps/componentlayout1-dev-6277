@@ -23,7 +23,8 @@ export class _Blank extends React.Component {
     Input_30: "",
     Input_23: "",
     Radio_59: true,
-    CheckBox_41: true
+    CheckBox_41: true,
+    Datepicker_10: new Date("06/22/2020")
   }
 
   render = () => (
@@ -193,6 +194,19 @@ export class _Blank extends React.Component {
               checked={this.state.CheckBox_41}
               onChange={nextChecked =>
                 this.setState({ CheckBox_41: nextChecked })
+              }
+            />
+            <Datepicker
+              style={{
+                overflow: "visible",
+                textAlign: "left",
+                verticalAlign: "baseline",
+                fontSize: 20,
+                borderStyle: "solid"
+              }}
+              date={this.state.Datepicker_10}
+              onSelect={nextValue =>
+                this.setState({ Datepicker_10: nextValue })
               }
             />
           </View>
