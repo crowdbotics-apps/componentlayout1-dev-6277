@@ -145,6 +145,15 @@ export class _Blank extends React.Component {
               checked={this.state.Toggle_3}
               onChange={nextChecked => this.setState({ Toggle_3: nextChecked })}
             />
+            <Image
+              resizeMode="cover"
+              style={{
+                overflow: "visible",
+                textAlign: "left",
+                verticalAlign: "baseline",
+                borderStyle: "solid"
+              }}
+            />
           </View>
           <View
             style={{
