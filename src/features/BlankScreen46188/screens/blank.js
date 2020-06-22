@@ -147,7 +147,13 @@ export class _Blank extends React.Component {
             />
             <Image
               resizeMode="cover"
+              source={{
+                uri:
+                  "https://d3nfddh2sbo9hk.cloudfront.net/media/project_component_resources/2.png"
+              }}
               style={{
+                width: "50%",
+                height: "50%",
                 overflow: "visible",
                 textAlign: "left",
                 verticalAlign: "baseline",
